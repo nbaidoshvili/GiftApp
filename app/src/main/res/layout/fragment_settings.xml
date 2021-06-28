@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/settingsFirstnameHeader"
+            android:layout_width="0dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.65"
+            android:text="Firstname:"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/settingsFirstname"/>
+        <TextView
+            android:id="@+id/settingsFirstname"
+            android:layout_width="0dp"
+            android:layout_marginBottom="40dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.65"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsFirstnameHeader"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/settingsLastnameHeader"
+            android:text="John"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintWidth_percent="0.75"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="#d9d9d9"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsFirstname"
+            app:layout_constraintBottom_toTopOf="@id/settingsLastnameHeader"/>
+
+
+        <TextView
+            android:id="@+id/settingsLastnameHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lastname:"
+            app:layout_constraintWidth_percent="0.65"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsFirstname"
+            app:layout_constraintBottom_toTopOf="@id/settingsLastname"/>
+        <TextView
+            android:id="@+id/settingsLastname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintWidth_percent="0.65"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsLastnameHeader"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/settingsEmailHeader"
+            android:text="Doe"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_height="1dp"
+            app:layout_constraintWidth_percent="0.75"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="#d9d9d9"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsLastname"
+            app:layout_constraintBottom_toTopOf="@id/settingsEmailHeader"/>
+
+        <TextView
+            android:id="@+id/settingsEmailHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            app:layout_constraintWidth_percent="0.65"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsLastname"
+            app:layout_constraintBottom_toTopOf="@id/settingsEmail"/>
+
+        <TextView
+            android:id="@+id/settingsEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            app:layout_constraintWidth_percent="0.65"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toTopOf="@id/changePasswordButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsEmailHeader"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="johndoe@email.com"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_height="1dp"
+            app:layout_constraintWidth_percent="0.75"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="#d9d9d9"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsEmail"
+            app:layout_constraintBottom_toTopOf="@id/changePasswordButton"/>
+
+        <Button
+            android:id="@+id/changePasswordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="change password"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsEmail" />
+
+        <TextView
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textSize="25sp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="#ea3d53"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/changePasswordButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

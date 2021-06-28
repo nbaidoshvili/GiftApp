@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/authorized_graph"
+    app:startDestination="@id/pagerFragment">
+
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.example.gift.fragments.PagerFragment"
+        android:label="PagerFragment" >
+        <action
+            android:id="@+id/action_pagerFragment_to_addPostFragment"
+            app:destination="@id/addPostFragment" />
+        <action
+            android:id="@+id/action_pagerFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.example.gift.fragments.AddPostFragment"
+        android:label="AddPostFragment" />
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.example.gift.fragments.CommentsFragment"
+        android:label="CommentsFragment" >
+        <argument
+            android:name="uid"
+            app:argType="string"
+            android:defaultValue="none" />
+        <argument
+            android:name="pid"
+            app:argType="string"
+            android:defaultValue="none" />
+    </fragment>
+</navigation>
